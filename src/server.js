@@ -3,7 +3,7 @@ import connectDB from './config/db.js';
 import env from 'dotenv';
 import cors from 'cors';
 
-// import userRoutes from './routes/user.js';
+import userRoutes from './routes/user.js';
 import courseRoutes from './routes/course.js';
 
 const app = express();
@@ -12,7 +12,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// app.use('/', userRoutes);
+app.use('/', userRoutes);
 app.use('/', courseRoutes);
 
 // app.get('/', (req, res) => {

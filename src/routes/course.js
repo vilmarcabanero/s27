@@ -4,6 +4,8 @@ import * as course from '../controllers/course.js';
 
 router.get('/courses', course.getCourses);
 
+router.get('/activecourses', course.getActiveCourses);
+
 router.post('/courses', course.createCourse);
 
 
