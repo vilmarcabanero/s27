@@ -8,6 +8,8 @@ router.get('/activecourses', course.getActiveCourses);
 
 router.post('/courses', course.createCourse);
 
+router.delete('/courses', course.deleteCourse);
+
 
 router.get('/', (req, res) => {
 	res.send('Hello world from course API!');

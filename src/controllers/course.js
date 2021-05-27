@@ -34,3 +34,14 @@ export const getActiveCourses = async (req, res) => {
 		return res.status(500).json({ error: error });
 	}
 };
+
+export const deleteCourse = async (req, res) => {
+	try {
+    
+		const _course = await Course.deleteOne({ });
+
+		return res.status(200).json(_course);
+	} catch (error) {
+		return res.status(500).json({ error: error });
+	}
+};
