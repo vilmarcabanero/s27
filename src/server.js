@@ -4,7 +4,7 @@ import env from 'dotenv';
 import cors from 'cors';
 
 // import userRoutes from './routes/user.js';
-// import courseRoutes from './routes/course.js';
+import courseRoutes from './routes/course.js';
 
 const app = express();
 env.config();
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // app.use('/', userRoutes);
-// app.use('/', courseRoutes);
+app.use('/', courseRoutes);
 
 // app.get('/', (req, res) => {
 // 	res.send('Hello World')
